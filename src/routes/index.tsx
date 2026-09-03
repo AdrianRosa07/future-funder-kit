@@ -114,6 +114,7 @@ function Carteira() {
                   formatter={(v: number, n: string) => [brl(v), n === "patrimonio" ? "Patrimônio" : "Aportado"]}
                 />
                 <Area
+                  isAnimationActive={false}
                   type="monotone"
                   dataKey="patrimonio"
                   stroke="var(--color-primary)"
@@ -121,6 +122,7 @@ function Carteira() {
                   fill="url(#gPat)"
                 />
                 <Area
+                  isAnimationActive={false}
                   type="monotone"
                   dataKey="aportado"
                   stroke="var(--color-muted-foreground)"
@@ -146,6 +148,7 @@ function Carteira() {
                   outerRadius={78}
                   paddingAngle={3}
                   stroke="none"
+                  isAnimationActive={false}
                 >
                   {alocacaoPorClasse.map((_, i) => (
                     <Cell key={i} fill={donutColors[i % donutColors.length]} />
